@@ -1,5 +1,34 @@
 # ml_duplicate_claim
 
+project setup
+
+Step 1 — Clone the repo:
+git clone <your-repo-url>
+cd ml_duplicate_claim
+
+
+
+Step 2 — Create virtual environment:
+cd api
+python3 -m venv venv
+source venv/bin/activate
+
+
+Step 3 — Install dependencies:
+pip install fastapi uvicorn sentence-transformers scikit-learn pandas numpy
+
+
+Step 4 — Generate embeddings:
+cd ../model
+../api/venv/bin/python train_model.py
+
+
+Step 5 — Run the server:
+cd ../api
+uvicorn server:app --reload
+
+
+
 
 train model ===> python train_model.py (/model directory)
 
